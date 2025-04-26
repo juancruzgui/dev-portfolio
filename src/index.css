@@ -1,0 +1,409 @@
+/* Add this to your index.css file */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap');
+
+/* Base styles */
+:root {
+  --primary: #3a86ff;
+  --primary-dark: #2563eb;
+  --secondary: #8338ec;
+  --accent: #ff006e;
+  --dark: #0f172a;
+  --light: #f8fafc;
+  --gray-dark: #1e293b;
+  --gray-medium: #475569;
+  --gray-light: #94a3b8;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --transition: all 0.3s ease;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  color: var(--dark);
+  background-color: var(--light);
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Custom Utility Classes */
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50%;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  border-radius: 2px;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 500;
+  text-align: center;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+  color: white;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, var(--primary-dark), var(--primary));
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  color: var(--light);
+  background-color: var(--dark);
+}
+
+body.dark-mode .card {
+  background-color: var(--gray-dark);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Header Animation */
+.animate-header {
+  animation: slideDown 0.5s ease forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Hero Section Animations */
+.hero-image-container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image-container::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  background: linear-gradient(45deg, rgba(58, 134, 255, 0.15), rgba(131, 56, 236, 0.15));
+  z-index: -1;
+  animation: morphShape 8s ease-in-out infinite alternate;
+}
+
+@keyframes morphShape {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 40% 60% 30% 70% / 60% 30% 60% 40%;
+  }
+}
+
+/* Custom Scroll Bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* Project Card Hover Effects */
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card img {
+  transition: var(--transition);
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(70%);
+}
+
+.project-card .project-content {
+  transition: var(--transition);
+}
+
+.project-card:hover .project-content {
+  transform: translateY(-10px);
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background: linear-gradient(45deg, rgba(58, 134, 255, 0.1), rgba(131, 56, 236, 0.1));
+  color: var(--primary);
+  border: 1px solid rgba(58, 134, 255, 0.2);
+  transition: var(--transition);
+}
+
+.tech-tag:hover {
+  background: linear-gradient(45deg, rgba(58, 134, 255, 0.2), rgba(131, 56, 236, 0.2));
+  transform: translateY(-2px);
+}
+
+/* Skill Bar Animation */
+.skill-bar {
+  height: 10px;
+  border-radius: 5px;
+  background: #e9ecef;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.skill-bar .progress {
+  height: 100%;
+  border-radius: 5px;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  position: relative;
+  animation: fillBar 2s ease forwards;
+  transform-origin: left;
+}
+
+@keyframes fillBar {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* Contact Form Styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
+}
+
+/* Footer Styling */
+.footer {
+  background: linear-gradient(to right, var(--dark), var(--gray-dark));
+  color: white;
+  padding: 50px 0;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  background: var(--primary);
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    text-align: center;
+  }
+
+  .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .hero-image-container {
+    margin-top: 30px;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.fade-in-right {
+  animation: fadeInRight 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Add this to your main CSS file */
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-track-gray-200 {
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+    --scrollbar-track: #e5e7eb;
+  }
+
+  .scrollbar-thumb-gray-400 {
+    --scrollbar-thumb: #9ca3af;
+  }
+
+  .dark .scrollbar-track-gray-700 {
+    --scrollbar-track: #374151;
+  }
+
+  .dark .scrollbar-thumb-gray-500 {
+    --scrollbar-thumb: #6b7280;
+  }
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
