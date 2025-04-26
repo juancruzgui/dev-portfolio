@@ -12,10 +12,11 @@ const AboutSection = ({ darkMode }) => {
             <h3 className="text-2xl font-bold mb-4 text-blue-500">My Journey</h3>
             <p className="text-lg mb-6 ">
               With 1+ years of experience in full stack development, I specialize in shipping web
-              applications fast, from UX/UI design to deployment.
+              applications fast, from UX/UI design to deployment. My domain expertise includes real estate web apps and
+              startups.
             </p>
             <p className="text-lg mb-6 ">
-              I'm passionate about creating new stuff and love solving complex challenges.
+              I'm an autodidact and tech enthusiast. I'm passionate about creating new stuff and love solving complex challenges.
             </p>
             <p className="text-lg ">
               When I'm not coding, you'll find me doing sports, reading tech blogs, or experimenting
@@ -25,25 +26,25 @@ const AboutSection = ({ darkMode }) => {
 
           <div className="md:w-1/2">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className={`p-6 rounded-lg ${darkMode ? 'bg-gray-700' : 'bg-white shadow-md'}`}>
-                <h4 className="font-bold text-xl mb-2">UX/UI</h4>
-
-                <p className="">B.S. Economics<br />Universidad Nacional de Cuyo, 2024</p>
+             <div className={`p-6 rounded-lg ${darkMode ? 'bg-gray-700' : 'bg-white shadow-md'}`}>
+                <h4 className="font-bold text-xl mb-2">Frontend</h4>
+                <p className="">+2 years<br />Frotend Development</p>
               </div>
 
               <div className={`p-6 rounded-lg ${darkMode ? 'bg-gray-700' : 'bg-white shadow-md'}`}>
                 <h4 className="font-bold text-xl mb-2">Backend</h4>
-                <p className="">1+ years<br />Full Stack Development</p>
+                <p className="">1+ years<br />Python Development</p>
               </div>
 
               <div className={`p-6 rounded-lg ${darkMode ? 'bg-gray-700' : 'bg-white shadow-md'}`}>
-                <h4 className="font-bold text-xl mb-2">Frontend</h4>
-                <p className="">+3 completed<br />Web Applications</p>
+                <h4 className="font-bold text-xl mb-2">Data Science/AI</h4>
+
+                <p className="">Data Science and AI Bootcamp<br />LeWagon, 2023</p>
               </div>
 
               <div className={`p-6 rounded-lg ${darkMode ? 'bg-gray-700' : 'bg-white shadow-md'}`}>
-                <h4 className="font-bold text-xl mb-2">Deployment</h4>
-                <p className="">Data Science<br />Le Wagon, 2023</p>
+                <h4 className="font-bold text-xl mb-2">Formal Education</h4>
+                <p className="">B.S. Economics<br />Universidad Nacional de Cuyo, 2024</p>
               </div>
             </div>
           </div>

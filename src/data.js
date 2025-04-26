@@ -1,103 +1,115 @@
 export const projects = [
   {
     title: "Internal Booking System",
-    description: "A booking system for events with Whatsapp and Slack Communications.",
-    fullDescription: "An advanced internal booking system designed to streamline event management with integrated communication channels. This system allows users to create, manage, and track event bookings while automatically sending notifications via Whatsapp and posting updates to relevant Slack channels. Built with a FastAPI backend and integrated with Twilio for messaging capabilities.",
+    subtitle: "Side Project",
+    description: "A booking system for events with Whatsapp/Email communications and calendar events.",
+    fullDescription: "An advanced internal booking system designed to streamline event management with integrated communication channels. This system allows employees to create, manage, and track event bookings while automatically sending notifications via Whatsapp to customers and posting updates to relevant Slack channels. Built with a FastAPI backend and integrated with Twilio for messaging capabilities.",
     technologies: ["Twilio", "FastAPI", "HTML/CSS/JS", "Airtable", "Rest API", "Render"],
     github: "#",
     live: "#",
     image: "/img/airtable.png",
-    gif: "/img/airtable-demo.gif", // You'll need to replace with actual GIF path
+    gif: ["/img/airtable.gif", "/img/twilio.gif", "/img/wpp.gif"],
     features: [
-      "Real-time booking availability updates",
-      "Automated Whatsapp notifications to attendees",
-      "Slack channel integration for team updates",
+      "Internal form to create bookings and events",
+      "Automated Whatsapp and email notifications to attendees",
+      "Whatsapp automated bot to deliver basic information",
+      "Slack channel integration for new bookings, inquiries and clients in CRM",
       "Airtable database for flexible data management",
-      "Admin dashboard for event management",
-      "Custom reporting and analytics"
+      "Automated generation of prices documents (PDF) based on database price changes",
+      "Based on FastAPI rest APIs, Airtable for database, Twilio for Whatsapp Notifications and Slack for internal communications",
     ]
   },
   {
     title: "Real Estate Dashboard",
+    subtitle: "Personal Project",
     description: "Analytics dashboard for sell/rent prices and ROI on Argentina's real estate market/submarkets.",
-    fullDescription: "A comprehensive real estate analytics platform focusing on Argentina's property market. This dashboard provides investors and real estate professionals with detailed market insights, property valuations, and return-on-investment calculations. The system aggregates data from multiple sources to create a holistic view of market trends across different submarkets within Argentina.",
-    technologies: ["FastAPI", "React", "PostgreSQL", "Linux", "Servers", "Rest API"],
+    fullDescription: "A comprehensive real estate analytics platform focusing on Argentina's property market. This table provides investors with market information on prices, listings and ROI. The system aggregates data to create view of market trends across different submarkets within Argentina.",
+    technologies: ["FastAPI", "React", "PostgreSQL", "Linux", "Servers", "Rest API", "Data Engineering"],
     github: "#",
     live: "#",
     image: "/img/inmoingo.png",
-    gif: "/img/inmoingo-demo.gif", // You'll need to replace with actual GIF path
+    gif: ["/img/inmoinfo.gif","/img/inmoinfo_sql.gif"],
     features: [
-      "Interactive price heat maps by neighborhood",
-      "Historical price trend analysis",
-      "ROI calculator with customizable parameters",
-      "Real-time market data integration",
-      "Comparative submarket analysis",
-      "Investment opportunity scoring system"
+      "Data scrapping, aggregation and loading pipeline with weekly run using FastAPI and PostgreSQL",
+      "Metrics for different property types and grouped by number of bedrroms",
+      "Median Sale Price, Median Rent Price, Median Lot Price, Median Anualized Return, Number of Listings, Number of real estate developments",
+      "Sort by metrics and filter by location",
+      "Data inline with government location data",
+      "Allow investors to find the best investment opportunities"
     ]
   },
   {
-    title: "MIBs Property Reports",
+    title: "Real Estate Property Reports",
+    subtitle: "Job Related Project",
     description: "Interactive property reports with market trends and map information.",
     fullDescription: "A specialized property reporting tool that generates detailed, interactive reports for individual properties. These reports combine property-specific data with broader market trends, location analysis, and visual mapping to provide comprehensive insights. The system utilizes various data sources to create a complete picture of a property's value, location advantages, and market position.",
     technologies: ["Flask", "HTML/CSS/JS", "Rest API", "Chart.js", "Leaflet", "AWS", "SQL"],
     github: "#",
     live: "#",
     image: "/img/property_report.png",
-    gif: "/img/property_report-demo.gif", // You'll need to replace with actual GIF path
+    gif: ["/img/property_reports.gif"],
     features: [
-      "Customizable property analysis reports",
-      "Interactive maps showing proximity to amenities",
+      "Comprehensive property analysis with market trends",
+      "Interactive maps showing proximity to amenities, risks around, zoning and more",
       "Comparative market analysis with similar properties",
-      "Historical price trends and future projections",
-      "Exportable PDF reports for clients",
-      "Integration with multiple listing services"
+      "Historical price trends and property transacion history",
+      "Integration with multiple listing services",
+      "Stripe inline payment system for report generation for free users",
+      "In-report authentication and user tracking",
     ]
   },
   {
-    title: "MIBs Suburb Reports",
+    title: "Suburb Reports",
+    subtitle: "Job Related Project",
     description: "Interactive report with market insights, demographics and map information.",
     fullDescription: "An advanced suburb analysis platform that provides detailed insights into neighborhood characteristics, market performance, and demographic data. These interactive reports help real estate professionals, investors, and homebuyers make informed decisions by understanding the full context of a suburb, including development trends, population shifts, and property value patterns.",
     technologies: ["Flask", "HTML/CSS/JS", "Rest API", "Chart.js", "Leaflet", "AWS", "SQL"],
     github: "#",
     live: "#",
     image: "/img/suburb_report.png",
-    gif: "/img/suburb_report-demo.gif", // You'll need to replace with actual GIF path
+    gif: ["/img/suburb_report.gif"],
     features: [
+      "Market insights with price trends and forecasts for units and houses",
+      "Properties for sale and rent in the area",
       "Demographic analysis with age, income, and occupation data",
       "School zone mapping and education statistics",
-      "Crime rate analysis and safety scoring",
       "Transportation and commute time visualization",
       "Property value trends by property type",
-      "Future development and infrastructure projects"
+      "Future development and infrastructure projects",
+      "Similar Suburbs algorithm to find comparable neighborhoods",
+      "GPT generated suburb descriptions and summaries",
+      "In-report authentication and user tracking",
     ]
   },
   {
     title: "TREXO: Backtesting App",
+    subtitle: "Personal Project",
     description: "Interactive report with market insights, demographics and map information.",
-    fullDescription: "TREXO is a sophisticated backtesting application designed for financial traders and analysts to evaluate trading strategies against historical market data. The platform incorporates advanced data analysis tools, LLM-powered strategy optimization, and comprehensive performance metrics to help users refine their trading approaches. Built with a Django backend and enhanced with AI capabilities via Claude and ChatGPT integrations.",
-    technologies: ["Django", "Django-rest", "HTML/CSS/JS", "LLM", "Claude", "ChatGPT", "SQLite"],
+    fullDescription: "TREXO is a backtesting application designed for technical traders to evaluate trading strategies against historical market data. The platform develops and tests a LLM-powered strategy generating comprehensive performance metrics to help users refine their trading approaches. Built with a Django backend with AI capabilities via Claude and ChatGPT integrations.",
+    technologies: ["Django", "Django-rest", "HTML/CSS/JS", "LLM", "Claude", "ChatGPT", "SQLite", "Redis"],
     github: "#",
-    live: "#",
+    live: "https://www.youtube.com/watch?v=ssYe2k0u3WM",
     image: "/img/trexo.png",
-    gif: "/img/trexo-demo.gif", // You'll need to replace with actual GIF path
+    gif: ["/img/trexo.gif"],
     features: [
-      "Comprehensive strategy backtesting against historical data",
-      "AI-powered trading strategy suggestions",
-      "Performance analytics with customizable metrics",
+      "Strategy backtesting against assets historical data",
+      "AI-generated trading strategies",
+      "Performance analytics with trading metrics",
       "Risk assessment and volatility analysis",
-      "Strategy comparison and optimization tools",
-      "Automated report generation with natural language summaries"
+      "Strategy comparison against different assets and time frames",
+      "Automated titles and descriptions generation using LLMs"
     ]
   },
   {
     title: "Cooly Digital Marketing Website",
+    subtitle: "Side Project",
     description: "Wordpress site for digital marketing agency.",
-    fullDescription: "A custom-designed WordPress website for Cooly, a digital marketing agency. This project focused on creating a visually striking online presence that showcases the agency's services, portfolio, and expertise. The site features AI-generated content and imagery to create a modern, professional appearance while maintaining excellent performance and user experience.",
+    fullDescription: "A custom-designed WordPress website for Cooly, a digital marketing agency. This project was developed to showcase the agency's services, portfolio, and pricing. The site features a modern design, user-friendly navigation, and is optimized for search engines. The content was generated using AI tools like ChatGPT for SEO optimization, while visuals were created with MidJourney to enhance the brand's online presence. Focuse was on delivering the website fastly to start promoting the agency.",
     technologies: ["Wordrpress", "ChatGPT", "MidJourney"],
     github: "#",
     live: "https://coolyaustralia.com/",
     image: "/img/cooly.png",
-    gif: "/img/cooly-demo.gif", // You'll need to replace with actual GIF path
+    gif: ["/img/cooly_2.gif"],
     features: [
       "Custom WordPress theme development",
       "AI-generated content optimized for SEO",

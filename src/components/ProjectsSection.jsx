@@ -21,14 +21,14 @@ const ProjectsSection = ({ darkMode, projects }) => {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        {/* <div className="mt-12 text-center">
           <a
             href="#"
             className={`inline-flex items-center px-6 py-3 ${darkMode ? 'border border-gray-700 hover:border-gray-600 text-gray-300' : 'border border-gray-300 hover:border-gray-400 text-gray-700'} font-medium rounded-md transition-colors duration-300`}
           >
             View All Projects <ExternalLink size={18} className="ml-2" />
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
