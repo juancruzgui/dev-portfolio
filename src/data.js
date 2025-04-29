@@ -23,7 +23,7 @@ export const projects = [
     title: "Real Estate Dashboard",
     subtitle: "Personal Project",
     description: "Analytics dashboard for sell/rent prices and ROI on Argentina's real estate market/submarkets.",
-    fullDescription: "A comprehensive real estate analytics platform focusing on Argentina's property market. This table provides investors with market information on prices, listings and ROI. The system aggregates data to create view of market trends across different submarkets within Argentina.",
+    fullDescription: "A comprehensive real estate analytics platform focusing on Argentina's property market. This table provides investors with market information on prices, listings and ROI. The system aggregates data to create a view of market trends across different submarkets within Argentina.",
     technologies: ["FastAPI", "React", "PostgreSQL", "Linux", "Servers", "Rest API", "Data Engineering"],
     github: "#",
     live: "#",
